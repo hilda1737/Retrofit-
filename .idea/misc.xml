@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_comment.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_comment_list_iteam.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_comments_recycler.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activityrvcomments.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/layout/retrofit_list_item.xml" value="0.22" />
       </map>
     </option>

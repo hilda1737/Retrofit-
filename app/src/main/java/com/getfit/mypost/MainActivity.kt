@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         FetchPosts()
     }
 
@@ -26,22 +27,28 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
                 if (response.isSuccessful) {
                     var post = response.body()
-                    Toast.makeText(baseContext, "Fetched ${post!!.size} post", Toast.LENGTH_LONG)
-                        .show()
+                    if(post!=null){
 
-                    var commentAdapter=Retrofitdapter(baseContext,post)
-                    binding.rvComments.layoutManager=LinearLayoutManager(baseContext)
-                    binding.rvComments.adapter=commentAdapter
+                    }
+//                    Toast.makeText(baseContext, "Fetched ${post!!.size} post", Toast.LENGTH_LONG)
+//                        .show()
+
+//                    var commentAdapter = Retrofitdapter(baseContext, post)
+//                    binding.rvComments.layoutManager = LinearLayoutManager(baseContext)
+//                    binding.rvComments.adapter = commentAdapter
+
                 }
             }
 
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {
+                Toast.makeText(baseContext,t.message,Toast.LENGTH_LONG).show()
 
             }
 
         })
     }
 }
+
 
 
 
